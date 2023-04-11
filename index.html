@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link href="css/main.css" rel="stylesheet">
+<title>Welcome to Healood</title>
+<script src="https://kit.fontawesome.com/28f7fdb90a.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <h1 class="hidden">Welcome to Healood</h1>
+	<div id="container">
+        <section id="header-con">
+            <header id="main-header" class="grid-con-h">
+                <div id="logo">
+                    <img src="images/SVG/logo_slogan.svg" alt="Healood Logo">
+                </div>
+                <nav id="main-nav">
+                    <h2 class="hidden">Main Navigation Healood</h2>
+                    <ul>
+                        <li><a class="active" href="index.html">Home</a></li>
+                        <li><a href="#">Recipes</a></li>
+                        <li><a href="#">About Healood</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </nav>
+                <a class="shop-text" id="shop-now-top" href="#"><h3>Shop Now</h3></a>
+            </header>
+        </section> 
+
+
+        <main>
+            <section class="grid-con" id="hero">
+                <h2 class="hidden">Hero Section - First Welcome Title</h2>
+                <article id="hero-text">
+                    <h2>Welcome to Healood</h2>
+                    <p>London’s Healood is a unique website where you can find any type of healthy for each taste, either for dinner, lunch, breakfast or whatever dish you want to try. Being an online website you can visit us at any time and any place.</p>
+                    <a class="start-text" id="start-top" href="#"><h3>Let's Start</h3></a>
+                </article>
+                <img src="images/final_images/desktop_final/spaghetti_tulip.jpg" alt="spaghetti" id="hero-image">
+            </section>  
+
+            <section class="grid-con" id="products">
+                <h2>Visit our Gallery and learn about Healthy Food!</h2>
+                <div class="product-box" id="product1">
+                    <img src="images/final_images/desktop_final/explosion_coffe.jpg" alt="coffe">
+                    <h3>Descafeined Coffe</h3>
+                </div>
+                <div class="product-box" id="product2">
+                    <img src="images/final_images/desktop_final/juice_rooster.jpg" alt="juice roaster">
+                    <h3>Red Fruit Smoothie</h3>
+                </div>
+                <div class="product-box" id="product3">
+                    <img src="images/final_images/desktop_final/fruit_tray.jpg" alt="fruit tray">
+                    <h3>Fruit Tray</h3>
+                </div>
+            </section>
+
+            <h2 id="about-title">Appetizers</h2>
+            <div id="about-con">
+                <div class="grid-con" id="about">
+                    <article id="about-text">
+                        <h3>We are one of the best restaurant in Ontario Providence. The numbers don’t lie</h3>
+                        <p>Healood, you can find any type of recipe for your groceries, all through an interactive website that will help you find the ingredients and products that best suits your lifestyle. We have a wide variety of products organized into different categories so that you can buy your products in the fastest way. Those of you who love to experiment making new recipes with products low in sugar and salt can do it comfortably since our dishes and desserts have high levels of nutrients and vitamins. What will make your food experience even more fun and entertaining. Thanks to the different characteristics that our website has, you can place your order from the comfort of your home and in different payment methods.
+                        </p>
+                        <br>
+                        <a class="about-button" id="about-us-top" href="#"><h4>About Us</h4></a>
+                    </article>
+
+                    <section id="about-image">
+                        <h3 class="hidden">Rounded Images of Main Appetizers</h3>
+                        <div class="image-section">
+                            <img src="images/final_images/desktop_final/grain_flower.jpg" id="dish1" alt="grain flower">
+
+                            <img src="images/final_images/desktop_final/juice_circle.jpg" id="dish2" alt="juice circle">
+                        </div>
+                        
+                        <div class="image-section">
+                            <img src="images/final_images/desktop_final/chocomilk.jpg" id="dish3" alt="chocomilk">
+
+                            <img src="images/final_images/desktop_final/wrap_nutella.jpg" id="dish4" alt="wrap nutella">
+                        </div>
+                    </section>
+                </div>
+            </div>
+            
+            <div class="grid-con" id="contact">
+                <article id="contact-text">
+                    <h2>Feel free to contact us</h2>
+                    <p>Feel free to order your food from anywhere you are online through our fast delivery delivery services.
+                    </p>
+                    <img src="images/final_images/desktop_final/rice_face.jpg" width="881" height="506" id="image-contact" alt="juice roaster">
+                </article>
+                    
+                <div id="contact-form">
+                    <form action="email.php" method="POST" enctype="text/plain">
+                        <input name="firstName" type="text" placeholder="First Name:">
+                        <input name="lastName" type="text" required placeholder="Last Name:">
+                        <input name="email" type="text" required placeholder="Email:">
+                        <textarea name="msg" placeholder="Comments" rows="3"></textarea>
+                        <input name="submit" type="submit" value="Contact">
+                    </form>
+                </div>
+            </div> 
+        </main>
+
+        <footer id="footer-con">
+            <div class="grid-con" id="footer">
+                
+                <nav id="footer-nav">
+                        <h2 class="hidden">Footer Navigation</h2>
+                        <ul>
+                            <li><a href="#">Copyright© 2023 Healood®</a></li>
+                            <li><a href="#">Terms of Use</a></li>
+                            <li><a href="#">Privacy Notice</a></li>
+                            <li><a href="#">Sitemap</a></li>
+                        </ul>
+                </nav>
+                
+                <h2 id="news-text">Newsletter - Sign-up</h2>
+                <div id="footer-newsletter1">
+                    <form action="email.php" method="POST" enctype="text/plain">
+                        <input name="email" type="text" required placeholder="Enter email adress">
+                    </form>
+                </div>
+
+                <div id="footer-newsletter2">
+                    <a href="#">Sign up</a>
+                </div>
+
+                <div id="footer-social">
+                    <i class="fa-brands fa-facebook fa-5x"></i>
+                    <i class="fa-brands fa-twitter fa-5x"></i>
+                    <i class="fa-brands fa-instagram fa-5x"></i>
+                </div>
+            </div>
+        </footer>
+    </div> 
+</body>
+</html>
