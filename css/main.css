@@ -1,0 +1,580 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=KoHo:wght@200&display=swap');
+
+/* CSS Document */
+
+/*Remove this rule on your HTML elements as you start to fill them with content*/
+
+.box-color {
+	color: #fff;
+	background: #000;
+	text-align: center;
+	margin: 0;
+}
+
+/*basic reset*/
+
+/*browsers have built in values for elements so we'll reset a few things to zero, you can add to this or remove items as needed*/
+
+div,p,body,header,footer,section,article,nav { 
+	margin: 0; 
+	padding: 0; 
+}	
+
+img { 
+	border: none; /*Remove border if image is a link*/
+	margin: 0; 
+	padding: 0; 
+}
+
+/*html selectors*/
+
+body {
+	font-family: 'KoHo', sans-serif;
+	font-size: 12px;
+}
+
+/* Remove underlines from links */
+
+a {
+	text-decoration: none;
+}
+
+/*hide elements from browser but show for doc outline*/
+
+.hidden {
+	display: none;
+}
+
+
+/*Common page elements  */
+
+/*This is essentially a box that we place the whole site in.  
+We center the box using margin 0 auto and give it a fixed width of 1920px.
+1920px would fit a large monitor or tv. Sizes will vary depending on the projects
+you work on and the intended audience */
+
+#container {
+	margin: 0 auto;
+	width: 1920px;
+}
+
+/* this is our grid based off of our XD file */
+
+.grid-con {
+	display: grid;
+	grid-template-columns: repeat(12, 122px);
+	grid-column-gap: 16px;
+	padding-left: 140px;
+	padding-right: 140px;
+}
+
+
+/* Header */
+
+.grid-con-h {
+	display: grid;
+	grid-template-columns: repeat(12, 122px);
+	grid-column-gap: 16px;
+	padding-left: 140px;
+	padding-right: 140px;
+}
+
+#main-header {
+	background-color: rgb(255, 255, 255);
+	position:sticky;
+	top:0px;
+}
+
+#header-con {
+	background-color: rgb(255,255,255);
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+#logo {
+	grid-column: 1/3;
+	background-color: rgb(255,255,255);
+	background-size: 100%;
+}
+
+#main-nav {
+	grid-column: 3/11;
+	height: 110px;
+	background-color: rgb(255,255,255);
+}
+
+#main-nav ul {
+	margin-top:35px;
+	margin-left:30px;
+	padding:0;
+}
+
+#main-nav ul li {
+	display:inline;
+	margin-right:72px;
+}
+
+#main-nav ul li a {
+	color:#000000;
+	font-size: 28px;
+}
+
+#main-nav ul li a:hover {
+	padding-bottom:8px;
+	border-bottom: 3px solid rgb(245, 32, 88);
+	transition: all 0.25s ease-in-out;
+}
+ /* apply to the element that has a class of 'active' */
+#main-nav ul li a.active {
+	padding-bottom:8px;
+	border-bottom: 3px solid rgb(245, 32, 88);
+}
+
+
+#shop-now-top {
+	grid-column: 11/-1;
+}
+
+.shop-text{
+	background-color: rgb(245, 32, 88);
+	color:#ffffff;
+	font-size:24px;
+	justify-content: center;
+	display:flex;
+	align-items: center;
+}
+
+
+
+/* Specific to index page desktop  */
+/* Main Hero Section */
+
+#hero {
+	background: url(../images/final_images/desktop_final/lemon_background.jpg) no-repeat bottom;
+	background-size: 100%;
+	height: 1075px;
+}
+
+#hero-text {
+	grid-column: 1/8;
+	/* Remove as content will dictate height */
+	height: 300px;
+	color:#000000;
+	font-size:28px;
+	text-align: left;
+	padding-top: 300px;
+	padding-right: 400px;
+}
+
+#hero-text h2 {
+	grid-column: 1/8;
+	/* Remove as content will dictate height */
+	color:#000000;
+	font-size:48px;	
+}
+
+
+#start-top {
+	grid-column: 1/-11;
+	/* Remove as content will dictate height */
+	width: 260px;
+	height: 80px;
+	margin-top: 60px;
+}
+
+.start-text{
+	background-color: rgb(245, 32, 88);
+	color:#ffffff;
+	font-size: 22px;
+	font-family: Arial, Helvetica, sans-serif;
+	justify-content: center;
+	display:flex;
+	align-items: center;
+}
+
+#hero-image {
+	grid-column: 8/-1;
+	/* Remove as content will dictate height */
+	height: 582px;
+	padding-top: 250px;
+}
+
+
+/* Menu Gallery - Photos */
+
+#products {
+	font-size: 28px;
+}
+
+#products h2 {
+	grid-column: 1/-1;
+	text-align: center;
+	font-size: 55px;
+}
+
+#product1 {
+	grid-column: 1/5;
+	/* Remove as content will dictate height */
+	height: 507px;
+}
+
+#product1 h3 {
+	display:flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 30px;
+}
+
+
+#product2 {
+	grid-column: 5/9;
+	/* Remove as content will dictate height */
+	height: 507px;	
+}
+
+#product2 h3 {
+	display:flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 30px;
+}
+
+#product3 {
+	grid-column: 9/-1;
+	/* Remove as content will dictate height */
+	height: 507px;
+}
+
+#product3 h3 {
+	display:flex;
+	justify-content: center;
+	align-items: center;
+	background-color:rgb(244, 225, 8);
+	font-size: 30px;
+}
+
+.product-box {
+	background-color: rgb(244, 225, 8);
+}
+
+
+
+/* Appetizers */
+#about-con {
+	background-color: rgb(244, 225, 8);
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+
+#about-title {
+	text-align: center;
+	color:#000000;
+	font-size:55px;	
+}
+
+
+#about-text {
+	grid-column: 1/8;
+	width: 900px;
+	color:#000000;
+	font-size:28px;
+	/*justify-content: center;
+	align-items: center;*/
+}
+
+#about-text h3 {
+	margin-bottom: 0;
+	font-size: 42px;
+}
+
+#about-us-top {
+	grid-column: 1/5;
+}
+
+.about-button {
+	background-color: rgb(0, 0, 0);
+	color:#ffffff;
+	width: 260px;
+	height: 80px;
+	display:flex;
+	justify-content: center;
+	align-items: center;
+	align-self: flex-start;
+}
+
+.about-button h4 {
+	font-size: 28px;
+}
+
+
+#about-image {
+	grid-column: 8/14;
+}
+
+
+#dish1 {
+	border-radius:100%;
+	height: 350px;
+	width: 350px;
+	margin-right: 80px;
+}
+
+#dish2 {
+	border-radius:100%;
+	height: 250px;
+	width: 250px;
+	margin-bottom: 50px;
+}
+
+#dish3 {
+
+	border-radius:100%;
+	height: 250px;
+	width: 250px;
+	margin-right: 80px;
+	margin-bottom: 50px;
+}
+
+#dish4 {
+	border-radius:100%;
+	height: 350px;
+	width: 350px;
+}
+
+
+
+
+/* Contact Form */
+#contact {
+	margin-top: 100px;
+	margin-bottom: 100px;
+}
+
+#contact-text {
+	grid-column: 1/8;
+	/* Remove as content will dictate height */
+	height: 700px;
+	color:#000000;
+	font-size:28px;
+	justify-content: center;
+	align-items: center;
+	padding-right: 70px;
+}
+
+#image-contact {
+	grid-column: 1/8;
+}
+
+#contact-form {
+	grid-column: 8/-1;
+	/* Remove as content will dictate height */
+	height: 700px;
+	background-color: rgb(245, 32, 88);
+}
+
+#contact-form form {
+	display:flex; 
+	flex-direction: column;
+	padding: 40px;
+	padding-top: 50px;
+	justify-content: center;
+	font-size: 30px;
+}
+
+input, textarea {
+	padding: 20px;
+	border: 2px solid #d6d6d6;
+	background-color: #f7f7f7;
+	margin-bottom: 30px;
+	border-radius: 5px;
+	font:inherit;
+	resize: none;
+}
+
+input[type="submit"] {
+	padding: 16px 32px;
+	background: #000000;
+	color: #ffffff;
+	border: none;
+	width: 220px;
+	align-self: flex-start;
+	transition: all 200ms ease-in;
+}
+
+input[type="submit"]:hover {
+	background-color: rgb(33,200,255);	
+}
+
+/*Common page elements  */
+/* Footer */
+
+#footer-con {
+	background-color: rgb(33,200,255);
+	padding-top: 50px;
+	padding-bottom: 20px;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+#footer-nav {
+	grid-column: 1/12;
+	/* Remove as content will dictate height */
+	margin-bottom: 100px;
+}
+
+#footer-nav ul li {
+	display:inline;
+	margin-right:72px;
+}
+
+#footer-nav ul li a {
+	color:#000000;
+	font-size: 20px;
+}
+
+#footer-nav ul li a:hover {
+	padding-bottom:8px;
+	border-bottom: 3px solid rgb(255, 255, 255);
+	transition: all 0.25s ease-in-out;
+}
+
+#news-text {
+	padding-bottom: 30px;
+	grid-column: 1/5;
+	color: #ffffff;
+	font-size: 25px;
+}
+
+#footer-newsletter1 {
+	grid-column: 1/5;
+	/* Remove as content will dictate height*/
+	height: 80px;
+	background-color: rgb(72, 71, 71);
+	color: #ffffff;
+	border-radius: 40px;
+}
+
+
+#footer-newsletter1 input {
+	grid-column: 1/5;
+	border-radius: 40px;
+	padding-right: 265px;
+	padding-bottom: 30px;
+	font-size:24px;
+	justify-content: center;
+	display:flex;
+	align-items: center;
+}
+
+#footer-newsletter2 {
+	grid-column: 5/7;
+	/* Remove as content will dictate height */
+	height: 80px;
+	color: #ffffff;
+	background-color: rgb(245, 32, 88);
+	border-radius: 40px;
+	font-size:24px;
+	justify-content: center;
+	display:flex;
+	align-items: center;
+}
+
+#footer-newsletter2 a {
+	color: #ffffff;
+}
+
+#footer-social {
+	grid-column: 11/-1;
+	/* Remove as content will dictate height */
+	border-radius: 40px;
+}
+
+.fa-facebook {
+	grid-column: 11/-1;
+}
+
+.fa-twitter{
+	grid-column: 11/-1;
+}
+
+.fa-instagram {
+	grid-column: 11/-1;
+}
+
+.fa-brands {
+	font-size: 84px;
+	color: #000000;
+	margin: 0 auto;
+	padding: 10px;
+}
+
+
+
+/* Gallery Page Styles */
+
+#gallery-hero-con {
+	background: url("../images/final_images/desktop_final/rice_cooker.jpg");
+	height: 580px;
+}
+
+#gallery-title {
+	grid-column: 4/10;
+	font-size: 48px;
+	margin-top: 50px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#gallery-text {
+	grid-column: 1/12;
+	/* Remove as content will dictate height */
+	height: 200px;
+	margin-top: 30px;
+}
+
+#p-gallery {
+	grid-column: 1/12;
+	font-size: 28px;
+	text-align: center;
+}
+
+#gallery-controls {
+	margin-top: 100px;
+	grid-column: 6/8;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.dot {
+	background-color: #dddddd;
+	height: 30px;
+	width: 30px;
+	border-radius: 50%;
+	margin: 5px;
+}
+
+#gallery h2 {
+	grid-column: 1/-1;
+	text-align: center;
+	font-size: 60px;
+}
+
+.gallery-box {
+	background-color: rgb(244, 225, 8);
+	grid-column: span 4 / span 4;
+	/* Remove as content will dictate height */
+	height: 507px;
+	margin-bottom: 20px;
+}
+
+.gallery-box a {
+	height: 100px;
+	color: #000000;
+	display: flex;
+	justify-content: center;
+	align-items: end;
+	font-size: 38px;
+}

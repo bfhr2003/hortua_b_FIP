@@ -1,0 +1,414 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=KoHo:wght@200&display=swap');
+
+/* CSS Document */
+
+/*Remove this rule on your HTML elements as you start to fill them with content*/
+
+.box-color {
+	color: #fff;
+	background: #000;
+	text-align: center;
+	margin: 0;
+}
+
+/*basic reset*/
+
+/*browsers have built in values for elements so we'll reset a few things to zero, you can add to this or remove items as needed*/
+
+div,p,body,header,footer,section,article,nav { 
+	margin: 0; 
+	padding: 0; 
+}	
+
+img { 
+	border: none; /*Remove border if image is a link*/
+	margin: 0; 
+	padding: 0; 
+}
+
+/*html selectors*/
+
+body {
+	font-family: 'KoHo', sans-serif;
+	font-size: 12px;
+}
+
+/* Remove underlines from links */
+
+a {
+	text-decoration: none;
+}
+
+/*hide elements from browser but show for doc outline*/
+
+.hidden {
+	display: none;
+}
+
+
+/*Common page elements  */
+
+/*This is essentially a box that we place the whole site in.  
+We center the box using margin 0 auto and give it a fixed width of 428px.
+428px would fit some phones. Sizes will vary depending on the projects
+you work on and the intended audience, we may go as low as 320px */
+
+#container {
+	margin: 0 auto;
+	width: 428px;
+}
+
+/* this is our grid based off of our XD file */
+.grid-con {
+	display: grid;
+	grid-template-columns: repeat(4, 85px);
+	grid-column-gap: 16px;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+/* Header */
+
+#header-con {
+	background-color: #ffffff;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+#header-logo {
+	grid-column: 1/3;
+	height: 80px;
+}
+
+#mobile-nav {
+	grid-column: 4/-1;
+}
+
+.burger {
+	height: 16px;
+	background-color:#000000;
+	display: block;
+	margin-bottom: 10px;
+}
+
+/* index page */
+/* Main Hero Section */
+
+#hero-con {
+	background-color: #aaaaaa;
+	background: url("../images/final_images/mobile_final/lemon.jpg");
+	/*height: 458px;*/
+}
+
+#title-hero {
+	grid-column: 1/-1;
+	font-size: 48px;
+	text-align: center;
+}
+
+#hero-text {
+	grid-column: 1/-1;
+	/* Remove as content will dictate height */
+	font-size: 28px;
+	margin-top: 20px;
+	text-align: center;
+}
+
+
+/* Menu Gallery - Photos */
+
+#image-slider-con {
+	background-color:rgb(244, 225, 8);
+	/* Remove as content will dictate height */
+	/*height: 640px;*/
+	position: relative;
+}
+
+#image-slider-con h2 {
+	background-color: #ffffff;
+	font-size: 28px;
+	text-align: center;
+	padding-top: 70px;
+	padding-bottom: 70px;
+	margin: 0;
+}
+
+#mobile-slider-left {
+	position: absolute;
+	left: 0;
+	font-size: 120px;
+	color:#ffffff;
+	top: 300px;
+}
+
+#mobile-slider-right {
+	position: absolute;
+	right: 0;
+	font-size: 120px;
+	color:#ffffff;
+	top: 300px;
+}
+
+#image-slider-con h3 {
+	background-color:rgb(244, 225, 8);
+	font-size: 28px;
+	text-align: center;
+	padding-top: 40px;
+	padding-bottom: 40px;
+	margin: 0;
+}
+
+
+/* Appetizers */
+
+#about-us-con h2 {
+	background-color: #ffffff;
+	text-align: center;
+	padding-top: 70px;
+	padding-bottom: 70px;
+	margin: 0;
+	font-size: 55px;
+}
+
+#about-us-text-con {
+	background-color:rgb(244, 225, 8);
+}
+
+#title-about {
+	grid-column: 1/-1;
+	font-size: 48px;
+	text-align: center;
+}
+
+#about-us-text {
+	grid-column: 1/-1;
+	/* Remove as content will dictate height */
+	margin-top: 70px;
+	margin-bottom: 40px;
+	font-size: 28px;
+	text-align: center;
+}
+
+.about-us-photo {
+	grid-column: 1/-1;
+	display: block;
+	margin: 20px auto 0 auto;
+	border-radius: 100%;
+}
+
+
+/* Contact Form */
+
+#contact-us-con {
+	margin-top: 100px;
+	margin-bottom: 60px;
+}
+
+#contact-us-con h2{
+	grid-column: 1/-1;
+	margin-top: 100px;
+	margin-bottom: 60px;
+	font-size: 48px;
+}
+
+#contact-text {
+	grid-column: 1/-1;
+	/* Remove as content will dictate height */
+	margin-bottom: 150px;
+	font-size: 28px;
+	padding-left: 40px;
+    padding-right: 40px;
+}
+
+#contact-form {
+	grid-column: 1/-1;
+	/* Remove as content will dictate height */
+	height: 580px;
+	background-color: rgb(245, 32, 88);
+}
+
+#contact-form form {
+	display:flex; 
+	flex-direction: column;
+	padding: 40px;
+	padding-top: 100px;
+	justify-content: center;
+	font-size: 20px;
+}
+
+input, textarea {
+	border: 2px solid #d6d6d6;
+	background-color: #f7f7f7;
+	margin-bottom: 30px;
+	padding: 7px;
+	border-radius: 5px;
+	font:inherit;
+	resize: none;
+}
+
+
+input[type="submit"] {
+	padding: 16px 32px;
+	background: #000000;
+	color: #ffffff;
+	border: none;
+	width: 220px;
+	align-self: flex-start;
+	transition: all 200ms ease-in;
+}
+
+input[type="submit"]:hover {
+	background-color: rgb(33,200,255);	
+}
+
+/*Common page elements  */
+/* Footer */
+
+#footer-con {
+	height: 410px;
+	background-color: rgb(33,200,255);
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+#footer-box {
+	margin-top: 40px;
+	/* Remove as content will dictate height */
+	height:45px;
+	grid-column: 1/3;
+	background-color: rgb(33,200,255);
+}
+
+.fa-facebook {
+	grid-column: 1/3;
+}
+
+.fa-twitter{
+	grid-column: 1/3;
+}
+
+.fa-instagram {
+	grid-column: 1/3;
+}
+
+.fa-brands {
+	color: #000000;
+	margin: 0 auto;
+	padding: 5px;
+}
+
+#news-text {
+	grid-column: 1/5;
+	color: #ffffff;
+	margin-top: 90px;
+	font-size: 28px;
+}
+
+#footer-newsletter1 {
+	/* Remove as content will dictate height */
+	height:100px;
+	grid-column: 1/-1;
+	color: #ffffff;
+	border-radius: 40px;
+}
+
+#footer-newsletter1 input {
+	grid-column: 1/-1;
+	background-color: #ffffff;
+	border-radius: 40px;
+	padding-right: 150px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	font-size:18px;
+	text-align: center;
+}
+
+#footer-con a.sign {
+	grid-column: 1/3;
+	/* Remove as content will dictate height*/
+	height: 50px;
+	color: #ffffff;
+	background-color: rgb(245,32,88);
+	border-radius: 40px;
+	font-size:15px;
+	justify-content: center;
+	display:flex;
+	align-items: center;
+}
+
+#footer-con a.copyright {
+	grid-column: 1/3;
+	/* Remove as content will dictate height*/
+	height: 30px;
+	color: #000000;
+	border-radius: 40px;
+	font-size:11px;
+	justify-content: center;
+	display:flex;
+	align-items: center;
+}
+
+
+
+
+/* Gallery Page Mobile */
+
+#hero-gallery-con {
+	background-color: #aaaaaa;
+	background: url("..//images/final_images/mobile_final/rice_cooker.jpg");
+	height: 458px;
+}
+
+#title-gallery {
+	grid-column: 1/-1;
+	font-size: 48px;
+	text-align: center;
+	margin-bottom: 25px;
+}
+
+#hero-gallery-text {
+	grid-column: 1/-1;
+	/* Remove as content will dictate height */
+	font-size: 28px;
+	text-align: center;
+}
+
+#gallery-controls {
+	grid-column: 1/-1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.dot {
+	background-color: #dddddd;
+	height: 30px;
+	width: 30px;
+	border-radius: 50%;
+	margin: 5px;
+}
+
+#gallery h2 {
+	text-align: center;
+	grid-column: 1/-1;
+	margin-top: 40px;
+	margin-bottom: 40px;
+	font-size: 48px;
+}
+
+.gallery-box {
+	grid-column: 1/-1;
+	background-color:rgb(244, 225, 8);
+	/* Remove as content will dictate height */
+	height: 507px;
+	margin-bottom: 20px;
+}
+
+.gallery-box a {
+	height: 80px;
+	color: #000000;
+	display: flex;
+	justify-content: center;
+	align-items: end;
+	font-size: 38px;
+}
